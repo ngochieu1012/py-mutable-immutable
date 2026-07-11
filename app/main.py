@@ -25,7 +25,7 @@ all_vars = {
     if not k.startswith("_") and k not in excluded
 }
 # Separate mutable and immutable
-mutable = []q
+mutable = []
 immutable = []
 for name, value in all_vars.items():
     if isinstance(value, (list, dict, set)):
