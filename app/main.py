@@ -16,20 +16,22 @@ marks = {
 }
 collection_of_coins = {1, 2, 25}
 
-# variables to exclude from inspection
-excluded = {"excluded"}
-
-# Get all variables from main module
-all_vars = {
-    k: v
-    for k, v in globals().items()
-    if not k.startswith("_") and k not in excluded
+# Define the 8 variables to classify
+variables_to_check = {
+    "lucky_number": lucky_number,
+    "pi": pi,
+    "one_is_a_prime_number": one_is_a_prime_number,
+    "name": name,
+    "my_favourite_films": my_favourite_films,
+    "profile_info": profile_info,
+    "marks": marks,
+    "collection_of_coins": collection_of_coins,
 }
 
 # Separate mutable and immutable
 mutable = []
 immutable = []
-for var_name, value in all_vars.items():
+for var_name, value in variables_to_check.items():
     if isinstance(value, (list, dict, set)):
         mutable.append(value)
     else:
