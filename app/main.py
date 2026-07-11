@@ -29,7 +29,7 @@ all_vars = {
 # Separate mutable and immutable
 mutable = []
 immutable = []
-for name, value in all_vars.items():
+for var_name, value in all_vars.items():
     if isinstance(value, (list, dict, set)):
         mutable.append(value)
     else:
