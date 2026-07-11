@@ -18,9 +18,10 @@ collection_of_coins = {1, 2, 25}
 
 # write your code here
 # Get all variables from main module
-all_vars = {k: v for k, v in globals().items() 
-            if not k.startswith('_') 
-            and k not in ('all_vars', 'mutable', 'immutable', 'sorted_variables')}
+all_vars = {k: v for k, v in globals().items()
+            if not k.startswith('_')
+            and k not in ("all_vars", "mutable", "immutable",
+                           "sorted_variables")}
 # Separate mutable and immutable
 mutable = []
 immutable = []
