@@ -16,6 +16,8 @@ marks = {
 }
 collection_of_coins = {1, 2, 25}
 # write your code here
+# variables to exclude from inspection
+excluded = set()
 # Get all variables from main module
 all_vars = {
     k: v
@@ -33,4 +35,4 @@ for name, value in all_vars.items():
 sorted_variables = {
     "mutable": mutable,
     "immutable": immutable
-}
+ }
