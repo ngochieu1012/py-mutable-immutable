@@ -35,4 +35,4 @@ for name, value in all_vars.items():
 sorted_variables = {
     "mutable": mutable,
     "immutable": immutable
- }
+}
