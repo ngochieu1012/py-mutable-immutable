@@ -15,15 +15,17 @@ marks = {
     "Sergio": 3,
 }
 collection_of_coins = {1, 2, 25}
-# write your code here
+
 # variables to exclude from inspection
-excluded = set()
+excluded = {"excluded"}
+
 # Get all variables from main module
 all_vars = {
     k: v
     for k, v in globals().items()
     if not k.startswith("_") and k not in excluded
 }
+
 # Separate mutable and immutable
 mutable = []
 immutable = []
@@ -32,6 +34,7 @@ for name, value in all_vars.items():
         mutable.append(value)
     else:
         immutable.append(value)
+
 sorted_variables = {
     "mutable": mutable,
     "immutable": immutable
